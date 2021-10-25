@@ -1,7 +1,7 @@
 const DataLoader = require('dataloader');
 const fetch = require('node-fetch');
 
-const API_URL = 'http://localhost:4000/v1';
+const {API_URL} = process.env;//'http://localhost:4000/v1';
 
 const doctorLoader = new DataLoader((ids) => {
   const arrayOfDoctorPromises = ids.map((id) => {
